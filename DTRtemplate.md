@@ -50,6 +50,8 @@ Be honest, be helpful, be mindful, be empethetic, be growth mindset.
 Now
 
 ## Ideas:
+Thinking again
+
 
 
 
