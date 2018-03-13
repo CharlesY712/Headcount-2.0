@@ -1,18 +1,18 @@
 import React from 'react';
+import './Card.css';
 
 const Card = ({district}) => {
-  console.log('data', district);
 
   const cardData = () => {
     return Object.keys(district.stats).map((year, index) => {
-
+      const indicator = district.stats[year] > 0.5 ? 'greaterThan' : 'lessThan';
       return (
-        <li key={index}>{ year }
-          <span>: {district.stats[year]}</span>
+        <li className={indicator} key={index}>{ year }
+          <span>: {Math.round(district.stats[year] * 100)/100}</span>
         </li>
-      )
-    })
-  }
+      );
+    });
+  };
 
   return (
     <div>
@@ -21,7 +21,7 @@ const Card = ({district}) => {
         { cardData() }
       </ul>
     </div>
-  )
-}
+  );
+};
 
 export default Card;

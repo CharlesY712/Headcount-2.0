@@ -14,11 +14,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.getData(kinderData)
+    this.getData(kinderData);
   }
 
-  getData(data) {
-    const districtData = new DistrictRepository(data);
+  getData(stats) {
+    const districtData = new DistrictRepository(stats);
     this.setState({
       districtStats: districtData
     });
