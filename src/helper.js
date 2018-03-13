@@ -11,7 +11,7 @@ export default class DistrictRepository {
           data: {}
         };
       }
-      cleanObj[district.Location.toUpperCase()].data[district.TimeFrame] = district.Data;
+      cleanObj[district.Location.toUpperCase()].data[district.TimeFrame] = Math.round((district.Data) * 1000)/1000 || 0;
       return cleanObj; 
     }, {});
   }
