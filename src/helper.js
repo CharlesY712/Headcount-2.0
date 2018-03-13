@@ -5,22 +5,40 @@ export default class DistrictRepository {
 
   cleanData = (stats) => {
     return stats.reduce((cleanObj, district) => {
-      if (!cleanObj[district.Location.toUpperCase()]) {
-        cleanObj[district.Location.toUpperCase()] = {
-          location: district.Location.toUpperCase(),
-          data: {}
+      const upperCaseLocation = district.Location.toUpperCase();
+
+      if (!cleanObj[upperCaseLocation]) {
+        cleanObj[upperCaseLocation] = {
+          location: upperCaseLocation,
+          stats: {}
         };
       }
-      cleanObj[district.Location.toUpperCase()].data[district.TimeFrame] = Math.round((district.Data) * 1000)/1000 || 0;
+      cleanObj[upperCaseLocation].stats[district.TimeFrame] = 
+      Math.round((district.Data) * 1000)/1000 || 0;
       return cleanObj; 
     }, {});
   }
 
-  findByName = (name = '') => {
-    let keys = Object.keys(this.stats)
-    // console.log(this.stats)
-     const match = keys.find(key => key === name.toUpperCase())
-    //  console.log(match)
-     return this.stats[match];
+  findByName = (name) => {
+    if (name) {
+      const upperCaseName = name.toUpperCase();
+      let districts = Object.keys(this.stats);
+      const location = districts.find(district => district === upperCaseName);
+
+      return this.stats[location];
+    }
+  }
+
+  findAllMatches = (name) => {
+    if (name) {
+      const upperCaseName = name.toUpperCase();
+      let districts = Object.keys(this.stats);
+      const filteredLocations = 
+      districts.filter(district => district.includes(upperCaseName));
+      
+      return filteredLocations.map(location => this.stats[location]);
+    } else {
+      return Object.keys(this.stats);
+    }
   }
 }
