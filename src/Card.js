@@ -21,7 +21,7 @@ const Card = ({district}) => {
         { cardData() }
       </ul>
     </div>
-  )
-}
+  );
+};
 
 export default Card;
