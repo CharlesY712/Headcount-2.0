@@ -5,3 +5,23 @@
 .lessThan {
   color: red;
 }
+
+.card {
+  width: 300px;
+  min-width: 300px;
+  border: 1px solid black;
+  border-radius: 30px 30px 30px 30px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.card-list {
+  list-style-type: none;
+  margin: auto;
+  width: 45%;
+}
+
+.card-title {
+  text-align: center;
+  margin-top: 10px;
+}

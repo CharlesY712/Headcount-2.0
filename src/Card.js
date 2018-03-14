@@ -15,9 +15,9 @@ const Card = ({district}) => {
   };
 
   return (
-    <div>
-      <h2>{district.location}</h2>
-      <ul>
+    <div className='card'>
+      <h2 className='card-title'>{district.location}</h2>
+      <ul className='card-list'>
         { cardData() }
       </ul>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import './CardContainer.css';
 
 const CardContainer = ({stats}) => {
   const districtCards = stats.map((district, index) => {
@@ -7,7 +8,7 @@ const CardContainer = ({stats}) => {
   });
   
   return (
-    <div>
+    <div className='card-container'>
       {districtCards}
     </div>
   );
