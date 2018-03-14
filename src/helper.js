@@ -38,7 +38,12 @@ export default class DistrictRepository {
       
       return filteredLocations.map(location => this.stats[location]);
     } else {
-      return Object.keys(this.stats);
+      const locations = Object.keys(this.stats);
+      const districts = locations.map((district) => {
+        return this.stats[district];
+      });
+      return districts;
+
     }
   }
 }
