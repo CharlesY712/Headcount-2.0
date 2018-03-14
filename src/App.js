@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
+import Search from './Search';
 import CardContainer from './CardContainer';
 import DistrictRepository from './helper';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 // import PropTypes from 'prop-types';
+
+const district = new DistrictRepository(kinderData);
 
 class App extends Component {
   constructor(props) {
@@ -17,10 +20,16 @@ class App extends Component {
     this.getData(kinderData);
   }
 
-  getData(stats) {
-    const districtData = new DistrictRepository(stats);
+  getData() {
     this.setState({
-      districtStats: districtData
+      districtStats: district.findAllMatches()
+    });
+  }
+
+  findMatch = (input) => {
+    const matches = district.findAllMatches(input);
+    this.setState({
+      districtStats: matches
     });
   }
 
@@ -28,8 +37,9 @@ class App extends Component {
     return (
       <div>
         <h1>Welcome to Headcount</h1>
+        <Search findMatch={this.findMatch}/>
         {this.state.districtStats &&
-        <CardContainer data={this.state.districtStats}/>
+        <CardContainer stats={this.state.districtStats}/>
         }
       </div>
     );
