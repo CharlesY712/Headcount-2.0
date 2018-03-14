@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Search.css';
 // import PropTypes from 'prop-types';
 
 class Search extends Component {
@@ -16,14 +17,15 @@ class Search extends Component {
 
   render() {
     return (
-      <div>
+      <div className= 'search-bar'>
         <input 
+          className='search-input'
           type='text'
           placeholder='Search location'
           value={this.state.location}
           onChange={this.handleChange}
         />
-        <button 
+        <button className='clear-button'
           type='submit'
         >Clear</button>
       </div>

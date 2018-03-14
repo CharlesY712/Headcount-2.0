@@ -1,0 +1,29 @@
+.search-bar {
+  text-align: center
+}
+
+.search-input {
+  width: 60%;
+  height: 40px;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+input::placeholder {
+  font-size: 30px;
+}
+
+.clear-button {
+  height: 45px;
+  width: 100px;
+  vertical-align: top;
+  border-radius: 30px 30px 30px 30px;
+  margin-left: 5px;
+  font-size: 2em;
+  color: #6A6A6A;
+}
+
+.clear-button:hover {
+  background-color: #6495ED;
+  color: black;
+}
