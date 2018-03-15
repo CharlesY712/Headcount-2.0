@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Search from './Search';
 import CardContainer from './CardContainer';
+import CompareContainer from './CompareContainer';
 import DistrictRepository from './helper';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 // import PropTypes from 'prop-types';
@@ -12,7 +13,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      districtStats: null
+      districtStats: null,
+      compareArray: [],
+      compareStats: {}
     };
   }
 
@@ -33,13 +36,49 @@ class App extends Component {
     });
   }
 
+  displayComparedCards = (event) => {
+    const location = event.target.closest('.card').firstChild.innerText;
+    const selectedCard = district.findByName(location);
+    const found = 
+    this.state.compareArray.find(stat => stat.location === location);
+
+    if (this.state.compareArray.length < 2) {
+      this.setState({
+        compareArray: [...this.state.compareArray, selectedCard]
+      });
+    } 
+
+    if (found) {
+      const filtered = 
+      this.state.compareArray.filter(stats =>  stats.location !== location);
+      this.setState({
+        compareArray: filtered
+      });
+    }
+  }
+
+  displayComparison = (district1, district2) => {
+    const comparedStats = 
+    district.compareDistrictAverages(district1.location, district2.location);
+    return comparedStats;
+  }
+
   render() {
     return (
       <div>
         <h1>Welcome to Headcount</h1>
         <Search findMatch={this.findMatch}/>
         {this.state.districtStats &&
-        <CardContainer stats={this.state.districtStats}/>
+        <div>
+          <CompareContainer 
+            compareArray={this.state.compareArray}
+            displayComparison={this.displayComparison}
+          />
+          <CardContainer 
+            stats={this.state.districtStats}
+            displayComparedCards={this.displayComparedCards}
+          />
+        </div>
         }
       </div>
     );
