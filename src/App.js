@@ -7,8 +7,6 @@ import DistrictRepository from './helper';
 import kinderData from './data/kindergartners_in_full_day_program.js';
 // import PropTypes from 'prop-types';
 
-const district = new DistrictRepository(kinderData);
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -17,20 +15,22 @@ class App extends Component {
       compareArray: [],
       compareStats: {}
     };
+
+    this.district = new DistrictRepository(kinderData);
   }
 
   componentDidMount() {
-    this.getData(kinderData);
+    this.getData();
   }
 
   getData() {
     this.setState({
-      districtStats: district.findAllMatches()
+      districtStats: this.district.findAllMatches()
     });
   }
 
   findMatch = (input) => {
-    const matches = district.findAllMatches(input);
+    const matches = this.district.findAllMatches(input);
     this.setState({
       districtStats: matches
     });
@@ -38,7 +38,7 @@ class App extends Component {
 
   displayComparedCards = (event) => {
     const location = event.target.closest('.card').firstChild.innerText;
-    const selectedCard = district.findByName(location);
+    const selectedCard = this.district.findByName(location);
     const found = 
     this.state.compareArray.find(stat => stat.location === location);
     
@@ -60,7 +60,7 @@ class App extends Component {
 
   displayComparison = (district1, district2) => {
     const comparedStats = 
-    district.compareDistrictAverages(district1.location, district2.location);
+    this.district.compareDistrictAverages(district1.location, district2.location);
     return comparedStats;
   }
 
