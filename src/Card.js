@@ -1,12 +1,14 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({district, displayComparedCards, compareArray}) => {
-  // const isSelected = compareArray.some(stats => {
-  //   console.log(stats)
-  //   return stats.location === district.location;
-  // });
-  // const highlight = isSelected ? 'selected': '';
+const Card = ({district, displayComparedCards, compareArray, selected}) => {
+  let isSelected;
+  if(compareArray) {
+    isSelected = compareArray.some(stats => {
+      return stats.location === district.location;
+    });
+  }
+  const highlight = isSelected ? 'selected': '';
   const cardData = () => {
     return Object.keys(district.stats).map((year, index) => {
       const indicator = district.stats[year] > 0.5 ? 'greaterThan' : 'lessThan';
@@ -21,7 +23,7 @@ const Card = ({district, displayComparedCards, compareArray}) => {
   return (
     <div
       onClick={displayComparedCards} 
-      className={`card `}>
+      className={`card ${highlight} ${selected}`}>
       <h2 className='card-title'>{district.location}</h2>
       <ul className='card-list'>
         { cardData() }

@@ -77,9 +77,10 @@ class App extends Component {
             displayComparedCards={this.displayComparedCards}
           />
           <CardContainer 
-            compareArray={this.state.compareArray}
             stats={this.state.districtStats}
             displayComparedCards={this.displayComparedCards}
+            selected={this.state.compareArray}
+            compareArray={this.state.compareArray}
           />
         </div>
         }
