@@ -41,13 +41,13 @@ class App extends Component {
     const selectedCard = district.findByName(location);
     const found = 
     this.state.compareArray.find(stat => stat.location === location);
-
+    
     if (this.state.compareArray.length < 2) {
       this.setState({
         compareArray: [...this.state.compareArray, selectedCard]
       });
-    } 
-
+    }
+    
     if (found) {
       const filtered = 
       this.state.compareArray.filter(stats =>  stats.location !== location);
@@ -55,6 +55,7 @@ class App extends Component {
         compareArray: filtered
       });
     }
+
   }
 
   displayComparison = (district1, district2) => {
@@ -73,8 +74,10 @@ class App extends Component {
           <CompareContainer 
             compareArray={this.state.compareArray}
             displayComparison={this.displayComparison}
+            displayComparedCards={this.displayComparedCards}
           />
           <CardContainer 
+            compareArray={this.state.compareArray}
             stats={this.state.districtStats}
             displayComparedCards={this.displayComparedCards}
           />
