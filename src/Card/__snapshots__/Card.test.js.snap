@@ -1,0 +1,356 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    displayComparedCards={[Function]}
+    district={
+        Object {
+            "location": "MEEKER RE1",
+            "stats": Object {
+              "2004": 0,
+              "2005": 0.505,
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="card-title"
+>
+          MEEKER RE1
+</h2>,
+        <ul
+          className="card-list"
+>
+          <li
+                    className="lessThan"
+          >
+                    2004
+                    <span>
+                              : 
+                              0
+                    </span>
+          </li>
+          <li
+                    className="greaterThan"
+          >
+                    2005
+                    <span>
+                              : 
+                              0.51
+                    </span>
+          </li>
+</ul>,
+      ],
+      "className": "card  undefined",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "MEEKER RE1",
+          "className": "card-title",
+        },
+        "ref": null,
+        "rendered": "MEEKER RE1",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className="lessThan"
+>
+              2004
+              <span>
+                            : 
+                            0
+              </span>
+</li>,
+            <li
+              className="greaterThan"
+>
+              2005
+              <span>
+                            : 
+                            0.51
+              </span>
+</li>,
+          ],
+          "className": "card-list",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2004",
+                <span>
+                  : 
+                  0
+</span>,
+              ],
+              "className": "lessThan",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2004",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    ": ",
+                    0,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  ": ",
+                  0,
+                ],
+                "type": "span",
+              },
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2005",
+                <span>
+                  : 
+                  0.51
+</span>,
+              ],
+              "className": "greaterThan",
+            },
+            "ref": null,
+            "rendered": Array [
+              "2005",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    ": ",
+                    0.51,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  ": ",
+                  0.51,
+                ],
+                "type": "span",
+              },
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="card-title"
+>
+            MEEKER RE1
+</h2>,
+          <ul
+            className="card-list"
+>
+            <li
+                        className="lessThan"
+            >
+                        2004
+                        <span>
+                                    : 
+                                    0
+                        </span>
+            </li>
+            <li
+                        className="greaterThan"
+            >
+                        2005
+                        <span>
+                                    : 
+                                    0.51
+                        </span>
+            </li>
+</ul>,
+        ],
+        "className": "card  undefined",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "MEEKER RE1",
+            "className": "card-title",
+          },
+          "ref": null,
+          "rendered": "MEEKER RE1",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className="lessThan"
+>
+                2004
+                <span>
+                                : 
+                                0
+                </span>
+</li>,
+              <li
+                className="greaterThan"
+>
+                2005
+                <span>
+                                : 
+                                0.51
+                </span>
+</li>,
+            ],
+            "className": "card-list",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2004",
+                  <span>
+                    : 
+                    0
+</span>,
+                ],
+                "className": "lessThan",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2004",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      ": ",
+                      0,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    ": ",
+                    0,
+                  ],
+                  "type": "span",
+                },
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2005",
+                  <span>
+                    : 
+                    0.51
+</span>,
+                ],
+                "className": "greaterThan",
+              },
+              "ref": null,
+              "rendered": Array [
+                "2005",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      ": ",
+                      0.51,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    ": ",
+                    0.51,
+                  ],
+                  "type": "span",
+                },
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

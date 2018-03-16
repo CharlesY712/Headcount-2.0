@@ -10,7 +10,7 @@
   color: red;
 }
 
-.lessThan:before {
+.lessThan:after {
   content: "\01F44E"
 }
 

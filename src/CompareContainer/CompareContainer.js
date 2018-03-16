@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../Card/Card';
+import PropTypes from 'proptypes';
 
 const CompareContainer = ({ compareArray, displayComparison, displayComparedCards}) => {
   const [first, second] = compareArray;
@@ -33,6 +34,12 @@ const CompareContainer = ({ compareArray, displayComparison, displayComparedCard
       {districtCards[1]}
     </div>
   );
+};
+
+CompareContainer.propTypes = {
+  displayComparedCards: PropTypes.func,
+  displayComparison: PropTypes.func,
+  compareArray: PropTypes.array
 };
 
 export default CompareContainer;

@@ -5,7 +5,7 @@ import CardContainer from '../CardContainer/CardContainer';
 import CompareContainer from '../CompareContainer/CompareContainer';
 import DistrictRepository from '../helper';
 import kinderData from '../data/kindergartners_in_full_day_program.js';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 class App extends Component {
   constructor(props) {
@@ -79,7 +79,6 @@ class App extends Component {
           <CardContainer 
             stats={this.state.districtStats}
             displayComparedCards={this.displayComparedCards}
-            selected={this.state.compareArray}
             compareArray={this.state.compareArray}
           />
         </div>
@@ -89,8 +88,8 @@ class App extends Component {
   }
 }
 
-// App.propTypes = {
-//   // addIdea: PropTypes.func
-// }
+App.propTypes = {
+  addIdea: PropTypes.func
+};
 
 export default App;
