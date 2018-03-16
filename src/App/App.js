@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import Search from './Search';
-import CardContainer from './CardContainer';
-import CompareContainer from './CompareContainer';
-import DistrictRepository from './helper';
-import kinderData from './data/kindergartners_in_full_day_program.js';
+import Search from '../Search/Search';
+import CardContainer from '../CardContainer/CardContainer';
+import CompareContainer from '../CompareContainer/CompareContainer';
+import DistrictRepository from '../helper';
+import kinderData from '../data/kindergartners_in_full_day_program.js';
 // import PropTypes from 'prop-types';
 
 class App extends Component {
@@ -58,9 +58,9 @@ class App extends Component {
 
   }
 
-  displayComparison = (district1, district2) => {
+  displayComparison = (name1, name2) => {
     const comparedStats = 
-    this.district.compareDistrictAverages(district1.location, district2.location);
+    this.district.compareDistrictAverages(name1.location, name2.location);
     return comparedStats;
   }
 
