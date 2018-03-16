@@ -2,17 +2,18 @@ import React from 'react';
 import Card from './Card';
 import './CardContainer.css';
 
-const CardContainer = ({stats, displayComparedCards}) => {
+const CardContainer = ({stats, displayComparedCards, compareArray}) => {
   const districtCards = stats.map((district, index) => {
     return <Card 
       district={district} 
       key={index}
+      displayComparedCards={displayComparedCards}
+      compareArray={compareArray}
     />;
   });
   
   return (
-    <div 
-      onClick={displayComparedCards} className='card-container'>
+    <div className='card-container'>
       {districtCards}
     </div>
   );

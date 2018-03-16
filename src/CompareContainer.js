@@ -1,12 +1,14 @@
 import React from 'react';
 import Card from './Card';
 
-const CompareContainer = ({compareArray, displayComparison}) => {
+const CompareContainer = ({ compareArray, displayComparison, displayComparedCards}) => {
   const [first, second] = compareArray;
   const districtCards = compareArray.map((district, index) => {
     return <Card
       district={district}
       key={index}
+      selected='selected'
+      displayComparedCards={displayComparedCards}
     />;
   });
 
