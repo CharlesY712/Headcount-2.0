@@ -15,8 +15,8 @@ class Search extends Component {
     this.props.findMatch(event.target.value);
   }
 
-  handleSubmit = (event) => {
-    this.setState({location: ''})
+  handleSubmit = () => {
+    this.setState({location: ''});
     this.props.findMatch();
   }
 
