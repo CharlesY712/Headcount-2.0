@@ -42,6 +42,6 @@ class Search extends Component {
 
 Search.propTypes = {
   findMatch: PropTypes.func
-}
+};
 
 export default Search;

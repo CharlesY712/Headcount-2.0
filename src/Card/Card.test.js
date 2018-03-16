@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('Card', () => {
   const mockObject = {
