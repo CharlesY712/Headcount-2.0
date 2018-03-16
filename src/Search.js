@@ -11,8 +11,13 @@ class Search extends Component {
   }
   
   handleChange = (event) => {
-    this.setState({location: event.target.value.toUpperCase()});
+    this.setState({location: event.target.value});
     this.props.findMatch(event.target.value);
+  }
+
+  handleSubmit = (event) => {
+    this.setState({location: ''})
+    this.props.findMatch();
   }
 
   render() {
@@ -25,8 +30,10 @@ class Search extends Component {
           value={this.state.location}
           onChange={this.handleChange}
         />
-        <button className='clear-button'
+        <button 
+          className='clear-button'
           type='submit'
+          onClick={this.handleSubmit}
         >Clear</button>
       </div>
     );

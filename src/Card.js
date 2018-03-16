@@ -3,8 +3,8 @@ import './Card.css';
 
 const Card = ({district, displayComparedCards, compareArray, selected}) => {
   let isSelected;
-  if(compareArray) {
-    isSelected = compareArray.some(stats => {
+  if (compareArray) {
+    isSelected = compareArray.find(stats => {
       return stats.location === district.location;
     });
   }
