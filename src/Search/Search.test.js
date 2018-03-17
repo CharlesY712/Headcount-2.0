@@ -36,17 +36,16 @@ describe('Search', () => {
     expect(mockFindMatch).toHaveBeenCalled();
   });
   
-  it('updates state of location on handle submit', () => {
+  it('updates state of location on handleSubmit', () => {
     const expectedState = { location: '' };
 
     wrapper.setState({location: 'colorado'});
     expect(wrapper.state()).toEqual({location: 'colorado'});
-    wrapper.find('.clear-button').simulate('click');
     wrapper.instance().handleSubmit();
     expect(wrapper.state()).toEqual(expectedState);
   });
 
-  it('should invoke findMatch on handle submit', () => {
+  it('should invoke findMatch on handleSubmit', () => {
     wrapper.instance().handleSubmit();
     expect(mockFindMatch).toHaveBeenCalled();
   });

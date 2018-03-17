@@ -2,7 +2,8 @@ import React from 'react';
 import Card from '../Card/Card';
 import PropTypes from 'proptypes';
 
-const CompareContainer = ({ compareArray, displayComparison, displayComparedCards}) => {
+const CompareContainer = 
+({ compareArray, displayComparison, displayComparedCards}) => {
   const [first, second] = compareArray;
   const districtCards = compareArray.map((district, index) => {
     return <Card
@@ -15,7 +16,8 @@ const CompareContainer = ({ compareArray, displayComparison, displayComparedCard
 
   const comparison = (districtCard1, districtCard2) => {
     if (compareArray.length === 2) {
-      let average = displayComparison(districtCard1, districtCard2);
+      let average = 
+      displayComparison(districtCard1.location, districtCard2.location);
       return (
         <div>
           <h2>{first.location}<br />{average[first.location]}</h2>

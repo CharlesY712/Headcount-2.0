@@ -36,32 +36,30 @@ class App extends Component {
     });
   }
 
-  displayComparedCards = (event) => {
-    const location = event.target.closest('.card').firstChild.innerText;
-    console.log(location)
+  addToCompareArray = (location) => {
     const selectedCard = this.district.findByName(location);
-    const found = 
-    this.state.compareArray.find(stat => stat.location === location);
-    
     if (this.state.compareArray.length < 2) {
       this.setState({
         compareArray: [...this.state.compareArray, selectedCard]
       });
     }
-    
+  }
+
+  removeFromCompareArray = (location) => {
+    const found = 
+    this.state.compareArray.find(stat => stat.location === location);
     if (found) {
-      const filtered = 
-      this.state.compareArray.filter(stats =>  stats.location !== location);
+      const filtered =
+        this.state.compareArray.filter(stats => stats.location !== location);
       this.setState({
         compareArray: filtered
       });
     }
   }
 
-  displayComparison = (name1, name2) => {
-    const comparedStats = 
-    this.district.compareDistrictAverages(name1.location, name2.location);
-    return comparedStats;
+  displayComparedCards = (location) => {
+    this.addToCompareArray(location);
+    this.removeFromCompareArray(location);
   }
 
   render() {
@@ -73,7 +71,7 @@ class App extends Component {
         <div>
           <CompareContainer 
             compareArray={this.state.compareArray}
-            displayComparison={this.displayComparison}
+            displayComparison={this.district.compareDistrictAverages}
             displayComparedCards={this.displayComparedCards}
           />
           <CardContainer 
