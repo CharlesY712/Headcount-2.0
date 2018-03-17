@@ -27,11 +27,26 @@ describe('App', () => {
     expect(wrapper.state('compareStats')).toEqual({});
   });
 
-  it('should update state when getData is called', () => {
-    
+  it('should update state districtStats when getData is called', () => {
+    const wrapper = shallow(<App />, { disableLifecycleMethods: true });
+    wrapper.instance().getData();
+    expect(wrapper.state('districtStats').length).toEqual(181);
   });
 
   it('should update state when findMatch is called', () => {
-   
+    const matches = 'colorado';
+    wrapper.instance().findMatch(matches);
+    expect(wrapper.state('districtStats').length).toEqual(2);
   });
+
+  // it('should invoke findByName when displayComparedCards is invoked', () => {
+  //   const mockFindByName = jest.fn();
+  //   const mockEvent = { target: { closest: jest.fn().mockImplementation() } };
+  //   wrapper.instance().displayComparedCards(mockEvent);
+  //   expect(mockFindByName).toHaveBeenCalled();
+  // });
+
+  // it('should place card into compare array if length is less than two', () => {
+
+  // });
 });

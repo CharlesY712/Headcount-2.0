@@ -1,14 +1,18 @@
 import React from 'react';
 import './Card.css';
+import PropTypes from 'prop-types';
 
 const Card = ({district, displayComparedCards, compareArray, selected}) => {
   let isSelected;
+
   if (compareArray) {
     isSelected = compareArray.find(stats => {
       return stats.location === district.location;
     });
   }
+
   const highlight = isSelected ? 'selected': '';
+
   const cardData = () => {
     return Object.keys(district.stats).map((year, index) => {
       const indicator = district.stats[year] > 0.5 ? 'greaterThan' : 'lessThan';
@@ -30,6 +34,13 @@ const Card = ({district, displayComparedCards, compareArray, selected}) => {
       </ul>
     </div>
   );
+};
+
+Card.propTypes = {
+  district: PropTypes.object,
+  displayComparedCards: PropTypes.func,
+  compareArray: PropTypes.array,
+  selected: PropTypes.string
 };
 
 export default Card;
