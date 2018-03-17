@@ -26,7 +26,7 @@ const Card = ({district, displayComparedCards, compareArray, selected}) => {
 
   return (
     <div
-      onClick={displayComparedCards} 
+      onClick={() => { displayComparedCards(district.location); }} 
       className={`card ${highlight} ${selected}`}>
       <h2 className='card-title'>{district.location}</h2>
       <ul className='card-list'>
