@@ -54,13 +54,13 @@ describe('App', () => {
   });
 
   it('should not add cards to compare array if length is > 2', () => {
-    wrapper.setState({
-      compareArray: [{}, {}]
-    });
-    const location = 'colorado';
-    instance.addToCompareArray(location);
+    const location1 = 'COLORADO';
+    const location2 = 'ACADEMY 20';
+    const location3 = 'ADAMS COUNTY 14';
+    instance.addToCompareArray(location1);
+    instance.addToCompareArray(location2);
+    instance.addToCompareArray(location3);
     expect(wrapper.state('compareArray').length).toEqual(2);
-
   });
 
   it('should remove card from compare array', () => {
