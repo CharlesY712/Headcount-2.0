@@ -9,9 +9,11 @@ describe('Search', () => {
   /* eslint-enable no-undef*/
 
   let wrapper;
+  let instance;
 
   beforeEach(() => {
     wrapper = shallow(<Search findMatch={mockFindMatch}/>);
+    instance = wrapper.instance();
   });
 
   it('should exist', () => {
@@ -26,13 +28,13 @@ describe('Search', () => {
     const mockEvent = {target: {value: 'abc'}};
     const expectedState = {location: 'abc'};
 
-    wrapper.instance().handleChange(mockEvent);
+    instance.handleChange(mockEvent);
     expect(wrapper.state()).toEqual(expectedState);
   });
 
   it('should invoke findMatch on handle change', () => {
     const mockEvent = { target: { value: 'abc' } };
-    wrapper.instance().handleChange(mockEvent);
+    instance.handleChange(mockEvent);
     expect(mockFindMatch).toHaveBeenCalled();
   });
   
@@ -41,12 +43,12 @@ describe('Search', () => {
 
     wrapper.setState({location: 'colorado'});
     expect(wrapper.state()).toEqual({location: 'colorado'});
-    wrapper.instance().handleSubmit();
+    instance.handleSubmit();
     expect(wrapper.state()).toEqual(expectedState);
   });
 
   it('should invoke findMatch on handleSubmit', () => {
-    wrapper.instance().handleSubmit();
+    instance.handleSubmit();
     expect(mockFindMatch).toHaveBeenCalled();
   });
 });

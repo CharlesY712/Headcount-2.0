@@ -18,7 +18,7 @@ const Card = ({district, displayComparedCards, compareArray, selected}) => {
       const indicator = district.stats[year] > 0.5 ? 'greaterThan' : 'lessThan';
       return (
         <li className={indicator} key={index}>{ year }
-          <span>: {Math.round(district.stats[year] * 100)/100}</span>
+          <span>: {Math.round(district.stats[year] * 100) / 100}</span>
         </li>
       );
     });
