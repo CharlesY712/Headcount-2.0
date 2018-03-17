@@ -46,8 +46,34 @@ describe('App', () => {
     expect(wrapper.state('districtStats')).toEqual(expectedState);
   });
 
-  it('should display the compared cards', () => {
+  it('should add cards to compare array', () => {
+    const location = 'colorado';
+    instance.addToCompareArray(location);
+    expect(wrapper.state('compareArray').length).toEqual(1);
+
+  });
+
+  it('should not add cards to compare array if length is > 2', () => {
+    wrapper.setState({
+      compareArray: [{}, {}]
+    });
+    const location = 'colorado';
+    instance.addToCompareArray(location);
+    expect(wrapper.state('compareArray').length).toEqual(2);
+
+  });
+
+  it('should remove card from compare array', () => {
+    wrapper.setState({
+      compareArray: [{location: 'COLORADO'}]
+    });
     const location = 'COLORADO';
+    instance.removeFromCompareArray(location);
+    expect(wrapper.state('compareArray').length).toEqual(0);
+  });
+
+  it('should display the compared cards', () => {
+    const location = 'colorado';
     /* eslint-disable no-undef*/
     instance.addToCompareArray = jest.fn();
     instance.removeFromCompareArray = jest.fn();

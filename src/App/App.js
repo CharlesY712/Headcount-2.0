@@ -30,10 +30,8 @@ class App extends Component {
   }
 
   findMatch = (input) => {
-    const matches = this.district.findAllMatches(input);
-    this.setState({
-      districtStats: matches
-    });
+    const districtStats = this.district.findAllMatches(input);
+    this.setState({districtStats});
   }
 
   addToCompareArray = (location) => {
