@@ -38,6 +38,7 @@ class App extends Component {
 
   displayComparedCards = (event) => {
     const location = event.target.closest('.card').firstChild.innerText;
+    console.log(location)
     const selectedCard = this.district.findByName(location);
     const found = 
     this.state.compareArray.find(stat => stat.location === location);
@@ -55,7 +56,6 @@ class App extends Component {
         compareArray: filtered
       });
     }
-
   }
 
   displayComparison = (name1, name2) => {
