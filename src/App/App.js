@@ -5,6 +5,7 @@ import CardContainer from '../CardContainer/CardContainer';
 import CompareContainer from '../CompareContainer/CompareContainer';
 import DistrictRepository from '../helper';
 import kinderData from '../data/kindergartners_in_full_day_program.js';
+import Media from "react-media";
 import PropTypes from 'prop-types';
 
 class App extends Component {
@@ -63,7 +64,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Welcome to Headcount</h1>
+        <Media query="(max-width: 550px)">
+          {matches =>
+            matches ? (
+              <h1 className='title-media'>Welcome to Headcount</h1>
+            ) : (
+              <h1 className='title'>Welcome to Headcount</h1>
+            )
+          }
+        </Media>
         <Search findMatch={this.findMatch}/>
         {this.state.districtStats &&
         <div>

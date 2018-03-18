@@ -3,30 +3,34 @@
 }
 
 .greaterThan:before {
-    content: "\01F44D";
+    content: "\02B06";
 }
 
 .lessThan {
   color: red;
 }
 
-.lessThan:after {
-  content: "\01F44E"
+.lessThan:before {
+  content: "\02B07"
 }
 
 .card {
-  width: 300px;
-  min-width: 300px;
+  width: 260px;
+  min-width: 220px;
   border: 1px solid black;
   border-radius: 30px 30px 30px 30px;
   margin-bottom: 15px;
   padding: 10px;
 }
 
+.card:hover{
+  background-color: #F5F5F5;
+}
+
 .card-list {
   list-style-type: none;
   margin: auto;
-  width: 45%;
+  width: 50%;
 }
 
 .card-title {

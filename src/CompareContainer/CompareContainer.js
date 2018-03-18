@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card';
 import PropTypes from 'proptypes';
+import './CompareContainer.css';
 
 const CompareContainer = 
 ({compareArray, displayComparison, displayComparedCards}) => {
@@ -19,10 +20,17 @@ const CompareContainer =
       let average = 
       displayComparison(districtCard1.location, districtCard2.location);
       return (
-        <div>
-          <h2>{first.location}<br />{average[first.location]}</h2>
-          <h3>{average.compared}</h3>
-          <h2>{second.location}<br />{average[second.location]}</h2>
+        <div className='compare-card'>
+          <h2>{first.location}<br />
+            <span className='compare-card-title'>{average[first.location]}
+            </span>
+          </h2>
+          <h3 className='compare-card-percent'> Difference = {average.compared}
+          </h3>
+          <h2>{second.location}<br />
+            <span className='compare-card-title'>{average[second.location]}
+            </span>
+          </h2>
         </div>
       );
     }
