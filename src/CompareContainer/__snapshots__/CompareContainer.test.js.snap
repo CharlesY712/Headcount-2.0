@@ -52,7 +52,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "0",
+        "key": "MEEKER RE1",
         "nodeType": "function",
         "props": Object {
           "displayComparedCards": undefined,
@@ -103,7 +103,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "0",
+          "key": "MEEKER RE1",
           "nodeType": "function",
           "props": Object {
             "displayComparedCards": undefined,

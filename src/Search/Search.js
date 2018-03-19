@@ -11,8 +11,9 @@ class Search extends Component {
   }
   
   handleChange = (event) => {
-    this.setState({location: event.target.value});
-    this.props.findMatch(event.target.value);
+    const { value } = event.target;
+    this.setState({location: value});
+    this.props.findMatch(value);
   }
 
   handleSubmit = () => {
