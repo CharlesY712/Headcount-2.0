@@ -22,4 +22,4 @@ Run `npm start` and visit localhost:3000 in your browser
 
 ## Screenshot
 
-![alt text goes here](file name/path goes here)
+![Wireframe](./src/Images/headcount-wireframe.png)

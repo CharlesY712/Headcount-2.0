@@ -24,6 +24,12 @@ input::placeholder {
 }
 
 .clear-button:hover {
-  background-color: #6495ED;
+  background-color: #45A2CA;
   color: black;
+}
+
+.description {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
 }

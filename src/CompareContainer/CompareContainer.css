@@ -6,6 +6,8 @@
   margin-bottom: 15px;
   padding: 10px;
   text-align: center;
+  background-image: url('../Images/background2.jpeg');
+  background-size: cover;
 }
 
 .compare-card-percent {

@@ -26,7 +26,7 @@ class Search extends Component {
         <input 
           className='search-input'
           type='text'
-          placeholder='Search location'
+          placeholder='Search Districts'
           value={this.state.location}
           onChange={this.handleChange}
         />
@@ -35,6 +35,7 @@ class Search extends Component {
           type='submit'
           onClick={this.handleSubmit}
         >Clear</button>
+        <p className='description'>Choose two districts to see the comparison of kindergarters in full day programs. </p>
       </div>
     );
   }
