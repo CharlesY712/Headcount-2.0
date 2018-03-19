@@ -10,9 +10,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      districtStats: null,
-      compareArray: [],
-      compareStats: {}
+      districtStats: [],
+      compareArray: []
     };
 
     this.district = new DistrictRepository(kinderData);
@@ -60,21 +59,22 @@ class App extends Component {
   }
 
   render() {
+    const { compareArray, districtStats } = this.state;
     return (
       <div>
         <h1 className='title'>Welcome to Headcount</h1>
         <Search findMatch={this.findMatch}/>
-        {this.state.districtStats &&
+        {districtStats &&
         <div>
           <CompareContainer 
-            compareArray={this.state.compareArray}
+            compareArray={compareArray}
             displayComparison={this.district.compareDistrictAverages}
             displayComparedCards={this.displayComparedCards}
           />
           <CardContainer 
-            stats={this.state.districtStats}
+            stats={districtStats}
             displayComparedCards={this.displayComparedCards}
-            compareArray={this.state.compareArray}
+            compareArray={compareArray}
           />
         </div>
         }

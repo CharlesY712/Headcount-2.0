@@ -24,11 +24,14 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should have a default state', () => {
+  it('should have a default state of districtStats', () => {
     const wrapper = shallow(<App />, {disableLifecycleMethods: true});
-    expect(wrapper.state('districtStats')).toEqual(null);
+    expect(wrapper.state('districtStats')).toEqual([]);
+  });
+
+  it('should have a default state of compareArray', () => {
+    const wrapper = shallow(<App />, { disableLifecycleMethods: true });
     expect(wrapper.state('compareArray')).toEqual([]);
-    expect(wrapper.state('compareStats')).toEqual({});
   });
 
   it('should update state districtStats when getData is called', () => {

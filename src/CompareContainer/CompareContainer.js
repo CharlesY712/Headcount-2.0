@@ -6,10 +6,10 @@ import './CompareContainer.css';
 const CompareContainer = 
 ({compareArray, displayComparison, displayComparedCards}) => {
   const [first, second] = compareArray;
-  const districtCards = compareArray.map((district, index) => {
+  const districtCards = compareArray.map((district) => {
     return <Card
       district={district}
-      key={index}
+      key={district.location}
       selected='selected'
       displayComparedCards={displayComparedCards}
     />;

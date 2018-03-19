@@ -50,7 +50,7 @@ export default class DistrictRepository {
     const districtFound = this.findByName(name);
     const districtKeys = Object.values(districtFound.stats);
     const returnedAverage = districtKeys.reduce((average, percent) => {
-      return average += percent;
+      return average + percent;
     }, 0) / districtKeys.length;
     return Math.round(returnedAverage * 1000) / 1000;
   }

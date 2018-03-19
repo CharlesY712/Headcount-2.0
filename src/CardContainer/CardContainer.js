@@ -4,10 +4,10 @@ import './CardContainer.css';
 import PropTypes from 'prop-types';
 
 const CardContainer = ({stats, displayComparedCards, compareArray}) => {
-  const districtCards = stats.map((district, index) => {
+  const districtCards = stats.map((district) => {
     return <Card 
       district={district} 
-      key={index}
+      key={district.location}
       displayComparedCards={displayComparedCards}
       compareArray={compareArray}
     />;

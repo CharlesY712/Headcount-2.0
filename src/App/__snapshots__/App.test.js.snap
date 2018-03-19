@@ -26,7 +26,18 @@ ShallowWrapper {
         <Search
           findMatch={[Function]}
 />,
-        null,
+        <div>
+          <CompareContainer
+                    compareArray={Array []}
+                    displayComparedCards={[Function]}
+                    displayComparison={[Function]}
+          />
+          <CardContainer
+                    compareArray={Array []}
+                    displayComparedCards={[Function]}
+                    stats={Array []}
+          />
+</div>,
       ],
     },
     "ref": null,
@@ -54,7 +65,55 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
-      null,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <CompareContainer
+              compareArray={Array []}
+              displayComparedCards={[Function]}
+              displayComparison={[Function]}
+/>,
+            <CardContainer
+              compareArray={Array []}
+              displayComparedCards={[Function]}
+              stats={Array []}
+/>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "compareArray": Array [],
+              "displayComparedCards": [Function],
+              "displayComparison": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "compareArray": Array [],
+              "displayComparedCards": [Function],
+              "stats": Array [],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
     ],
     "type": "div",
   },
@@ -73,7 +132,18 @@ ShallowWrapper {
           <Search
             findMatch={[Function]}
 />,
-          null,
+          <div>
+            <CompareContainer
+                        compareArray={Array []}
+                        displayComparedCards={[Function]}
+                        displayComparison={[Function]}
+            />
+            <CardContainer
+                        compareArray={Array []}
+                        displayComparedCards={[Function]}
+                        stats={Array []}
+            />
+</div>,
         ],
       },
       "ref": null,
@@ -101,7 +171,55 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
-        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <CompareContainer
+                compareArray={Array []}
+                displayComparedCards={[Function]}
+                displayComparison={[Function]}
+/>,
+              <CardContainer
+                compareArray={Array []}
+                displayComparedCards={[Function]}
+                stats={Array []}
+/>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "compareArray": Array [],
+                "displayComparedCards": [Function],
+                "displayComparison": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "compareArray": Array [],
+                "displayComparedCards": [Function],
+                "stats": Array [],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
       ],
       "type": "div",
     },
