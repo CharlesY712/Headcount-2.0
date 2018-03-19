@@ -5,11 +5,10 @@ import CardContainer from '../CardContainer/CardContainer';
 import CompareContainer from '../CompareContainer/CompareContainer';
 import DistrictRepository from '../helper';
 import kinderData from '../data/kindergartners_in_full_day_program.js';
-import PropTypes from 'prop-types';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       districtStats: null,
       compareArray: [],
@@ -83,9 +82,5 @@ class App extends Component {
     );
   }
 }
-
-App.propTypes = {
-  addIdea: PropTypes.func
-};
 
 export default App;
