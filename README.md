@@ -4,12 +4,14 @@ HeadCount 2.0 is a react app that allows users to view and compare various educa
 
 ## Project Goals
 
-This is a Mod3 Front-End project designed to challenge our skills at manipulating data and creating small, reusable React components using the 'create-react-app' boilerplate. We imported files containing data and treated the data as if it were being fetched from an API. In the spirit of TDD we have were given some unit tests to start off with, then we moved on to creating the rest of the react application on our own, followed by thorough, meaningful, and comprehensinve unit and integreation testing of the application using Jest and Enzyme. PropTypes were also used to validate props passed to each componenet.
+This is a Mod3 Front-End project designed to challenge our skills at manipulating data and creating small, reusable React components using the 'create-react-app' boilerplate. We imported files containing data and treated the data as if it were being fetched from an API. In the spirit of TDD we have were given some unit tests to start off with, then we moved on to creating the rest of the react application on our own, followed by thorough, meaningful, and comprehensinve unit and integreation testing of the application using Jest and Enzyme. PropTypes were also used to validate props passed to each component.
 
 ## Team
 
 Aldo Mercado
+
 Ngoc Phan
+
 Charles Yach
 
 ## Set Up
@@ -22,4 +24,4 @@ Run `npm start` and visit localhost:3000 in your browser
 
 ## Screenshot
 
-![Wireframe](./src/Images/headcount-wireframe.png)
+![Screenshot](./src/Images/headcount-wireframe.png)

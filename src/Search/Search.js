@@ -35,7 +35,8 @@ class Search extends Component {
           type='submit'
           onClick={this.handleSubmit}
         >Clear</button>
-        <p className='description'>Choose two districts to see the comparison of kindergarters in full day programs. </p>
+        <p className='description'>Select two districts by clicking their card
+        to see the comparison of kindergartners in full day programs. </p>
       </div>
     );
   }

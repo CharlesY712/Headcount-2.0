@@ -65,7 +65,7 @@ class App extends Component {
     return (
       <div>
         <Media query="(max-width: 550px)">
-          {matches =>
+          {matches => 
             matches ? (
               <h1 className='title-media'>Welcome to Headcount</h1>
             ) : (
