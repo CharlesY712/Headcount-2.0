@@ -18,9 +18,12 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1>
-          Welcome to Headcount
-</h1>,
+        <Media
+          defaultMatches={true}
+          query="(max-width: 550px)"
+>
+          [Function]
+</Media>,
         <Search
           findMatch={[Function]}
 />,
@@ -32,13 +35,15 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
-          "children": "Welcome to Headcount",
+          "children": [Function],
+          "defaultMatches": true,
+          "query": "(max-width: 550px)",
         },
         "ref": null,
-        "rendered": "Welcome to Headcount",
-        "type": "h1",
+        "rendered": [Function],
+        "type": [Function],
       },
       Object {
         "instance": null,
@@ -62,9 +67,12 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
-            Welcome to Headcount
-</h1>,
+          <Media
+            defaultMatches={true}
+            query="(max-width: 550px)"
+>
+            [Function]
+</Media>,
           <Search
             findMatch={[Function]}
 />,
@@ -76,13 +84,15 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": "Welcome to Headcount",
+            "children": [Function],
+            "defaultMatches": true,
+            "query": "(max-width: 550px)",
           },
           "ref": null,
-          "rendered": "Welcome to Headcount",
-          "type": "h1",
+          "rendered": [Function],
+          "type": [Function],
         },
         Object {
           "instance": null,
